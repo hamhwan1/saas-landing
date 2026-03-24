@@ -1,0 +1,16 @@
+packages:
+  "framer-motion": "For smooth scroll reveals, complex layout animations, and the interactive FAQ accordion"
+  "clsx": "For constructing dynamic class names easily"
+  "tailwind-merge": "For merging tailwind classes without conflicts"
+
+images:
+  - path: "artifacts/yettey-landing/public/images/hero-mesh.png"
+    description: "Abstract, very dark, high-end 3D gradient mesh with subtle deep violet and indigo light leaks, resembling digital data flow. Extremely minimal, lots of negative space."
+    aspect_ratio: "16:9"
+  - path: "artifacts/yettey-landing/public/images/ui-abstract.png"
+    description: "Abstract futuristic 3D geometry representing AI processing digital media assets. Dark theme, glowing purple edges, polished glass and metal textures."
+    aspect_ratio: "16:9"
+
+notes:
+  - This is a static landing page, no backend integration required.
+  - Using Framer Motion for scroll-triggered entry animations and interactive elements.

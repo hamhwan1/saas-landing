@@ -1,0 +1,225 @@
+Build a modern SaaS landing page for a product called "Yettey".
+
+Yettey is an AI-powered Digital Asset Management (DAM) platform that helps users manage media files and turn them into content using AI.
+
+--------------------------------------------------
+
+🎯 Core Concept
+
+The product positioning is:
+
+1. Manage your media (DAM)
+2. Understand your media (AI analysis)
+3. Turn media into content (AI transformation)
+
+This flow must be clearly reflected in the landing page.
+
+--------------------------------------------------
+
+🎨 Design Style
+
+- Dark theme (primary)
+- Modern SaaS UI (similar to Vercel, Notion, OpusClip)
+- Clean, minimal, high-end 느낌
+- Smooth animations (fade-in, hover effects)
+- Strong typography hierarchy
+- Card-based layout
+
+--------------------------------------------------
+
+📌 Header (Navigation)
+
+Sticky header with:
+
+Left:
+- Logo (Yettey)
+
+Center:
+- Product (dropdown)
+    - Digital Asset Management
+    - AI Content Creation
+    - Video Transformation
+    - Collaboration
+
+- Solutions (dropdown)
+    - For Marketers
+    - For Content Creators
+    - For Teams / Agencies
+
+- Resources (dropdown)
+    - Blog
+    - Guides
+    - Use Cases
+
+- Pricing
+
+Right:
+- Login
+- Primary CTA button: "Get Started"
+
+--------------------------------------------------
+
+🚀 Hero Section
+
+Headline:
+"Manage your media like data."
+"Create content with AI. Turn videos into short-form — all in one platform."
+
+Subtext:
+Explain that Yettey helps organize, analyze, and transform media into content.
+
+CTA:
+- Get Started
+- Book a Demo
+
+Background:
+- Subtle gradient / abstract motion
+
+--------------------------------------------------
+
+⚠️ Problem Section
+
+Title:
+"Creating content shouldn't be this complicated"
+
+3 pain points:
+- Scattered files
+- Slow editing workflows
+- Poor collaboration
+
+Use icons or simple visuals
+
+--------------------------------------------------
+
+🧠 Core Features Section
+
+4 main sections:
+
+1. Digital Asset Management
+→ "Centralize, structure, and instantly find your media"
+
+2. AI Content Creation
+→ "Generate images and content instantly"
+
+3. Video Transformation
+→ "Turn long videos into short-form content"
+
+4. Collaboration
+→ "Work together on media like a shared workspace"
+
+Each section:
+- Image (left or right alternating)
+- Text
+- Bullet points
+
+--------------------------------------------------
+
+🔄 Workflow Section
+
+Title:
+"From raw media to published content — in minutes"
+
+Horizontal flow with arrows:
+
+Upload → AI Analysis → Edit → Transform → Publish
+
+This must be visually clear and simple
+
+--------------------------------------------------
+
+🖥 Product UI Section
+
+Show dashboard preview:
+- Media grid
+- AI tools
+- Content preview
+
+Focus on:
+- DAM structure
+- AI tools integration
+
+--------------------------------------------------
+
+💬 Testimonials Section
+
+- 3~6 cards
+- Name, role, short quote
+
+--------------------------------------------------
+
+❓ FAQ Section
+
+Basic questions:
+- What is Yettey?
+- How does AI work?
+- Who is it for?
+- Pricing / usage
+
+--------------------------------------------------
+
+🔥 Final CTA Section
+
+"Turn your media into content today."
+
+Buttons:
+- Get Started
+- Book a Demo
+
+--------------------------------------------------
+
+📌 Footer
+
+Structure:
+
+Left:
+- Logo
+- Short description:
+  "Manage and transform your media with AI"
+
+Columns:
+
+Product
+- DAM
+- AI Tools
+- Video Tools
+- Collaboration
+
+Solutions
+- Marketing Teams
+- Creators
+- Agencies
+
+Resources
+- Blog
+- Guides
+- Documentation
+
+Company
+- About
+- Contact
+
+Legal
+- Privacy Policy
+- Terms of Service
+
+Bottom:
+- Copyright
+
+--------------------------------------------------
+
+⚙️ Technical Requirements
+
+- Use Next.js + Tailwind CSS
+- Fully responsive (mobile-first)
+- SEO-friendly structure (semantic HTML)
+- Fast loading
+- Clean component structure
+
+--------------------------------------------------
+
+🎯 Important Notes
+
+- Do NOT make it feature-heavy or confusing
+- Keep messaging simple and clear
+- Focus on DAM + AI transformation concept
+- UX should guide user to "Get Started"
