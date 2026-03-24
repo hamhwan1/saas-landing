@@ -73,13 +73,16 @@ function Hero() {
           </button>
         </FadeIn>
 
-        {/* Abstract UI Preview in Hero */}
+        {/* Hero Video */}
         <FadeIn delay={0.5} className="mt-20 mx-auto max-w-5xl relative">
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
-          <img 
-            src={`${import.meta.env.BASE_URL}images/hero-mesh.png`} 
-            alt="Yettey Platform Visualization" 
-            className="w-full rounded-2xl border border-white/10 shadow-2xl opacity-80"
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none"></div>
+          <video
+            src={`${import.meta.env.BASE_URL}hero-video.mp4`}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full rounded-2xl border border-white/10 shadow-2xl"
           />
         </FadeIn>
       </div>
@@ -143,28 +146,32 @@ function Features() {
       tag: "Digital Asset Management",
       icon: FolderTree,
       bullets: ["Smart search & auto-tagging", "Custom folder hierarchies", "Support for RAW, 4K, and 3D files"],
-      align: "left"
+      align: "left",
+      image: "feature-dam.png"
     },
     {
       title: "Generate images and content instantly",
       tag: "AI Content Creation",
       icon: Sparkles,
       bullets: ["Text-to-image generation", "Context-aware copy suggestions", "Auto-enhance image quality"],
-      align: "right"
+      align: "right",
+      image: "feature-ai.png"
     },
     {
       title: "Turn long videos into short-form content",
       tag: "Video Transformation",
       icon: Scissors,
       bullets: ["Auto-detect viral moments", "Burn-in dynamic captions", "1-click export for TikTok & Reels"],
-      align: "left"
+      align: "left",
+      image: "feature-video.png"
     },
     {
       title: "Work together like a shared workspace",
       tag: "Collaboration",
       icon: MessageSquare,
       bullets: ["Frame-accurate video comments", "Granular role-based access", "Shared brand asset libraries"],
-      align: "right"
+      align: "right",
+      image: "feature-collab.png"
     }
   ];
 
@@ -199,22 +206,16 @@ function Features() {
               </FadeIn>
             </div>
 
-            {/* Abstract UI Visual */}
+            {/* Feature Image */}
             <div className="flex-1 lg:w-1/2 w-full">
               <FadeIn delay={0.2}>
-                <div className="aspect-[4/3] rounded-2xl glass-panel relative overflow-hidden flex items-center justify-center group">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent z-0"></div>
-                  {/* Decorative elements representing the feature */}
-                  <div className="relative z-10 w-3/4 h-3/4 bg-background/50 rounded-xl border border-white/5 shadow-xl flex flex-col p-4 gap-4 overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
-                    <div className="h-6 w-1/3 bg-white/10 rounded-md"></div>
-                    <div className="flex-1 flex gap-4">
-                      <div className="w-1/3 h-full bg-white/5 rounded-lg"></div>
-                      <div className="w-2/3 h-full flex flex-col gap-2">
-                        <div className="h-2/3 w-full bg-white/10 rounded-lg"></div>
-                        <div className="h-1/3 w-full bg-primary/20 rounded-lg border border-primary/30"></div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/${feature.image}`}
+                    alt={feature.tag}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
                 </div>
               </FadeIn>
             </div>
