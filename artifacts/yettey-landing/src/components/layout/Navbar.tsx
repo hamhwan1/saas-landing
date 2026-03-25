@@ -22,12 +22,12 @@ export function Navbar() {
       dropdown: ["Digital Asset Management", "AI Content Creation", "Video Transformation", "Collaboration"],
     },
     {
-      name: "Solutions",
-      dropdown: ["For Marketers", "For Creators", "For Teams / Agencies"],
+      name: "Use Cases",
+      dropdown: ["For Creators", "For Marketers", "For Teams"],
     },
     {
       name: "Resources",
-      dropdown: ["Blog", "Guides", "Use Cases"],
+      dropdown: ["Blog", "Guides", "Help Center"],
     },
     { name: "Pricing" },
   ];
@@ -59,11 +59,10 @@ export function Navbar() {
                   {link.name}
                   {link.dropdown && <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />}
                 </button>
-                
-                {/* Dropdown */}
+
                 {link.dropdown && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200">
-                    <div className="bg-card border border-border rounded-xl shadow-xl p-2 w-56 flex flex-col gap-1">
+                    <div className="bg-card border border-border rounded-xl shadow-xl p-2 w-52 flex flex-col gap-1">
                       {link.dropdown.map((item) => (
                         <button key={item} className="text-left px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors">
                           {item}
