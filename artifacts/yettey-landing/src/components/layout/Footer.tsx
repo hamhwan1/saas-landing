@@ -17,7 +17,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-              Manage and transform your media with AI. The complete operating system for modern content teams.
+              Manage and transform your media with AI.
             </p>
           </div>
 

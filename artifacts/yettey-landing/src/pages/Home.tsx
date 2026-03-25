@@ -1,26 +1,21 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Play, 
   ArrowRight, 
-  Search, 
   Sparkles, 
-  Video, 
-  Users, 
   FolderTree, 
-  Zap, 
-  Image as ImageIcon,
   MessageSquare,
   UploadCloud,
   Cpu,
   Scissors,
-  Share2
+  Share2,
+  Search,
+  Video,
+  Users
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-
-// --- Sub-components for Sections ---
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
@@ -37,7 +32,6 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
 function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      {/* Background effects */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_center,_var(--tw-gradient-stops))] from-primary/15 via-background to-background"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 blur-[120px] rounded-full pointer-events-none opacity-50"></div>
       
@@ -52,28 +46,24 @@ function Hero() {
         <FadeIn delay={0.1}>
           <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6">
             Manage your media like data.<br />
-            <span className="text-gradient-primary">Create content with AI.</span>
+            <span className="text-gradient-primary">Turn it into content with AI.</span>
           </h1>
         </FadeIn>
         
         <FadeIn delay={0.2}>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Turn long videos into short-form, organize scattered files, and build a unified media engine for your entire team. All in one platform.
+            A centralized platform to organize, analyze, and transform your media.<br />
+            Built for marketers, creators, and teams managing content at scale.
           </p>
         </FadeIn>
         
         <FadeIn delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg shadow-[0_0_40px_rgba(124,58,237,0.3)] hover:shadow-[0_0_60px_rgba(124,58,237,0.5)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
-            Get Started Free
+          <button data-testid="button-hero-cta" className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg shadow-[0_0_40px_rgba(124,58,237,0.3)] hover:shadow-[0_0_60px_rgba(124,58,237,0.5)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
+            Start for free
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold text-lg border border-white/10 backdrop-blur-md transition-all duration-300 flex items-center justify-center gap-2">
-            <Play className="w-5 h-5" />
-            Book a Demo
           </button>
         </FadeIn>
 
-        {/* Hero Video */}
         <FadeIn delay={0.5} className="mt-20 mx-auto max-w-5xl relative">
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none"></div>
           <video
@@ -95,17 +85,17 @@ function Problems() {
     {
       icon: Search,
       title: "Scattered Files",
-      desc: "Media stored across hard drives, chat apps, and generic cloud tools makes finding the right asset impossible."
+      desc: "Your media is spread across folders, drives, and tools — making it hard to find and reuse."
     },
     {
       icon: Video,
       title: "Slow Editing",
-      desc: "Manual editing workflows kill your team's productivity and delay your content calendar by weeks."
+      desc: "Manual editing workflows slow you down and limit your output."
     },
     {
       icon: Users,
       title: "Version Chaos",
-      desc: "No shared workspace means endless feedback loops, duplicate files, and someone asking 'is this final_v4?'"
+      desc: "No shared workspace means endless confusion, duplicate files, and lost versions."
     }
   ];
 
@@ -113,11 +103,14 @@ function Problems() {
     <section className="py-24 bg-background border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            Creating content shouldn't be this complicated.
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
+            Creating content shouldn't be this complicated
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Traditional DAMs are just digital lockers. Video editors are too complex. You need a system that does both.
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+            Your media is scattered.<br />
+            Your workflow is slow.<br />
+            Your content takes too long to produce.<br /><br />
+            You don't need more tools. You need a system that actually works.
           </p>
         </FadeIn>
 
@@ -144,32 +137,36 @@ function Features() {
     {
       title: "Centralize, structure, and instantly find your media",
       tag: "Digital Asset Management",
+      description: "Organize all your media in one place with a powerful and scalable system.",
       icon: FolderTree,
-      bullets: ["Smart search & auto-tagging", "Custom folder hierarchies", "Support for RAW, 4K, and 3D files"],
+      bullets: ["Smart search with AI-driven tagging", "Custom folder hierarchies", "Support for images, videos, and more"],
       align: "left",
       image: "feature-dam.png"
     },
     {
       title: "Generate images and content instantly",
       tag: "AI Content Creation",
+      description: "Create and enhance content using AI directly from your media library.",
       icon: Sparkles,
-      bullets: ["Text-to-image generation", "Context-aware copy suggestions", "Auto-enhance image quality"],
+      bullets: ["Text-to-image generation", "Context-aware content suggestions", "Automatic quality enhancement"],
       align: "right",
       image: "feature-ai.png"
     },
     {
       title: "Turn long videos into short-form content",
       tag: "Video Transformation",
+      description: "Convert raw video into ready-to-publish content in minutes.",
       icon: Scissors,
-      bullets: ["Auto-detect viral moments", "Burn-in dynamic captions", "1-click export for TikTok & Reels"],
+      bullets: ["Auto-detect key moments", "Smart caption generation", "Optimized export for social platforms"],
       align: "left",
       image: "feature-video.png"
     },
     {
       title: "Work together like a shared workspace",
       tag: "Collaboration",
+      description: "Collaborate on media with your team in real time.",
       icon: MessageSquare,
-      bullets: ["Frame-accurate video comments", "Granular role-based access", "Shared brand asset libraries"],
+      bullets: ["Shared projects and comments", "Role-based access control", "Version tracking and history"],
       align: "right",
       image: "feature-collab.png"
     }
@@ -181,22 +178,22 @@ function Features() {
         {features.map((feature, i) => (
           <div key={i} className={cn("flex flex-col lg:flex-row items-center gap-16", feature.align === 'right' && "lg:flex-row-reverse")}>
             
-            {/* Text Content */}
             <div className="flex-1 lg:w-1/2">
               <FadeIn>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 border border-primary/20">
                   <feature.icon className="w-4 h-4" />
                   {feature.tag}
                 </div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 leading-tight">
                   {feature.title}
                 </h2>
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">{feature.description}</p>
                 <ul className="space-y-4 mb-8">
                   {feature.bullets.map((bullet, j) => (
                     <li key={j} className="flex items-start gap-3 text-muted-foreground">
                       <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                         <svg className="w-3.5 h-3.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinelinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
                       <span className="text-lg">{bullet}</span>
@@ -206,7 +203,6 @@ function Features() {
               </FadeIn>
             </div>
 
-            {/* Feature Image */}
             <div className="flex-1 lg:w-1/2 w-full">
               <FadeIn delay={0.2}>
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
@@ -226,27 +222,85 @@ function Features() {
   );
 }
 
+function ProductUI() {
+  return (
+    <section className="py-24 bg-card/20 border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FadeIn className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 border border-primary/20">
+            <FolderTree className="w-4 h-4" />
+            Product
+          </div>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
+            Everything your media workflow needs
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            A unified workspace for your media library, AI tools, and content publishing — all in one platform.
+          </p>
+        </FadeIn>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <FadeIn delay={0.1}>
+            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
+              <img
+                src={`${import.meta.env.BASE_URL}images/product-ui-2.png`}
+                alt="Yettey DAM - Asset Library"
+                className="w-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-6">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-medium mb-2">
+                  <FolderTree className="w-3 h-3" /> Digital Asset Management
+                </span>
+                <h3 className="text-lg font-bold text-white">Centralized media library</h3>
+                <p className="text-sm text-white/60">Find any asset in seconds with AI-powered search</p>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
+              <img
+                src={`${import.meta.env.BASE_URL}images/product-ui-1.png`}
+                alt="Yettey AI Tools"
+                className="w-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-6">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-medium mb-2">
+                  <Sparkles className="w-3 h-3" /> AI Tools
+                </span>
+                <h3 className="text-lg font-bold text-white">AI-powered content creation</h3>
+                <p className="text-sm text-white/60">Generate and transform content directly from your library</p>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Workflow() {
   const steps = [
-    { icon: UploadCloud, title: "Upload", desc: "Drop your raw files" },
-    { icon: Cpu, title: "AI Analysis", desc: "Auto-tags & transcribes" },
-    { icon: Scissors, title: "Edit", desc: "Refine on timeline" },
-    { icon: Sparkles, title: "Transform", desc: "Generate formats" },
-    { icon: Share2, title: "Publish", desc: "Send to channels" },
+    { icon: UploadCloud, title: "Upload", desc: "Drop your media into your workspace" },
+    { icon: Cpu, title: "AI Analysis", desc: "Automatically understand and tag your content" },
+    { icon: Scissors, title: "Edit", desc: "Refine content using AI tools" },
+    { icon: Sparkles, title: "Transform", desc: "Convert into ready-to-use content" },
+    { icon: Share2, title: "Publish", desc: "Export and share across platforms" },
   ];
 
   return (
     <section className="py-24 bg-card/30 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <FadeIn mb-16>
+        <FadeIn>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            From raw media to published content — in minutes.
+            From raw media to published content — in minutes
           </h2>
-          <p className="text-muted-foreground text-lg">A streamlined pipeline built for modern speeds.</p>
+          <p className="text-muted-foreground text-lg">A streamlined pipeline built for modern content teams.</p>
         </FadeIn>
 
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between relative">
-          {/* Connecting line */}
           <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent z-0"></div>
 
           {steps.map((step, i) => (
@@ -330,20 +384,20 @@ function Testimonials() {
 function Faq() {
   const faqs = [
     {
-      q: "What exactly is Yettey?",
-      a: "Yettey is an AI-powered Digital Asset Management (DAM) platform. It doesn't just store your files; it analyzes them, tags them automatically, and provides AI tools to transform long-form media into short-form content directly within the platform."
+      q: "What is Yettey?",
+      a: "Yettey is an AI-powered Digital Asset Management (DAM) platform. It doesn't just store your files — it analyzes them, tags them automatically, and provides AI tools to transform long-form media into short-form content directly within the platform."
     },
     {
       q: "How does the AI work?",
       a: "When you upload media, our AI models analyze the audio and visual elements to generate searchable metadata. For video transformation, it identifies engaging moments, crops to vertical formats, and generates dynamic subtitles automatically."
     },
     {
-      q: "Who is Yettey built for?",
+      q: "Who is Yettey for?",
       a: "Yettey is designed for marketing teams, content creators, and digital agencies who handle large volumes of media and need to quickly repurpose assets across different channels without relying on complex video editing software."
     },
     {
       q: "How is pricing structured?",
-      a: "We offer simple, usage-based tiers. Our Starter plan is perfect for individual creators, while our Pro and Enterprise plans offer advanced collaboration features, custom AI model training, and increased storage/export limits."
+      a: "We offer simple, usage-based tiers. Our Starter plan is perfect for individual creators, while our Pro and Enterprise plans offer advanced collaboration features, custom AI model training, and increased storage and export limits."
     }
   ];
 
@@ -368,6 +422,7 @@ function Faq() {
                 )}
               >
                 <button
+                  data-testid={`button-faq-${i}`}
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
                   className="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
                 >
@@ -399,7 +454,7 @@ function Faq() {
 
 function ChevronDown({ className }: { className?: string }) {
   return (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round">
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="m6 9 6 6 6-6"/>
     </svg>
   );
@@ -412,17 +467,15 @@ function CTA() {
       <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
         <FadeIn>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-            Turn your media into content today.
+            Turn your media into content today
           </h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Join thousands of teams shipping better content, faster. No credit card required.
+            Join teams that are moving faster with smarter content workflows.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg shadow-[0_0_40px_rgba(124,58,237,0.3)] hover:shadow-[0_0_60px_rgba(124,58,237,0.5)] hover:-translate-y-1 transition-all duration-300">
-              Get Started for Free
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-card hover:bg-white/5 text-foreground font-semibold text-lg border border-border transition-all duration-300">
-              Book a Demo
+            <button data-testid="button-cta-start" className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg shadow-[0_0_40px_rgba(124,58,237,0.3)] hover:shadow-[0_0_60px_rgba(124,58,237,0.5)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
+              Start for free
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </FadeIn>
@@ -439,6 +492,7 @@ export default function Home() {
         <Hero />
         <Problems />
         <Features />
+        <ProductUI />
         <Workflow />
         <Testimonials />
         <Faq />

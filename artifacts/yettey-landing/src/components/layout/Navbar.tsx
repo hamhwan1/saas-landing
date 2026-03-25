@@ -23,7 +23,7 @@ export function Navbar() {
     },
     {
       name: "Solutions",
-      dropdown: ["For Marketers", "For Content Creators", "For Teams/Agencies"],
+      dropdown: ["For Marketers", "For Creators", "For Teams / Agencies"],
     },
     {
       name: "Resources",
@@ -82,7 +82,7 @@ export function Navbar() {
               Login
             </button>
             <button className="px-5 py-2.5 text-sm font-medium rounded-xl bg-primary text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-200">
-              Get Started
+              Start for free
             </button>
           </div>
 
@@ -123,7 +123,7 @@ export function Navbar() {
               <div className="h-px bg-border my-2" />
               <button className="text-left font-medium text-foreground">Login</button>
               <button className="w-full py-3 text-center font-medium rounded-xl bg-primary text-primary-foreground mt-2">
-                Get Started
+                Start for free
               </button>
             </div>
           </motion.div>

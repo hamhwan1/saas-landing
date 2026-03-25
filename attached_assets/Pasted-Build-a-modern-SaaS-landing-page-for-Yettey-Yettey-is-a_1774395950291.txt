@@ -1,0 +1,329 @@
+Build a modern SaaS landing page for "Yettey".
+
+Yettey is an AI-powered Digital Asset Management (DAM) platform that helps users manage media files and transform them into content using AI.
+
+--------------------------------------------------
+
+🎯 Core Positioning
+
+Yettey is NOT just an AI tool.
+
+It is:
+- A Digital Asset Management platform
+- Combined with AI to transform media into content
+
+Core value flow:
+
+1. Manage your media
+2. Understand your media with AI
+3. Turn media into content
+
+This flow must be clearly reflected across the entire landing page.
+
+--------------------------------------------------
+
+🎨 Design Direction
+
+- Keep the existing dark SaaS design (do NOT change layout structure)
+- Modern, minimal, premium SaaS style
+- Similar level of quality as Vercel / Notion / OpusClip
+- Smooth animations (fade-in, hover)
+- Strong typography hierarchy
+- Card-based sections
+
+IMPORTANT:
+👉 Keep the current design UI
+👉 Replace ALL content with the following structure and copy
+
+--------------------------------------------------
+
+📌 Header
+
+Left:
+- Logo (Yettey)
+
+Center navigation:
+- Product (dropdown)
+    - Digital Asset Management
+    - AI Content Creation
+    - Video Transformation
+    - Collaboration
+
+- Solutions (dropdown)
+    - For Marketers
+    - For Creators
+    - For Teams / Agencies
+
+- Resources (dropdown)
+    - Blog
+    - Guides
+    - Use Cases
+
+- Pricing
+
+Right:
+- Login
+- Primary CTA: "Start for free"
+
+REMOVE:
+❌ Book a Demo button
+
+--------------------------------------------------
+
+🚀 Hero Section
+
+Headline:
+
+Manage your media like data.
+Turn it into content with AI.
+
+Subtext:
+
+A centralized platform to organize, analyze, and transform your media.
+Built for marketers, creators, and teams managing content at scale.
+
+CTA:
+- Start for free
+
+REMOVE:
+❌ Book a Demo
+
+Background:
+- Keep existing visual style
+
+--------------------------------------------------
+
+⚠️ Problem Section
+
+Title:
+
+Creating content shouldn't be this complicated
+
+Description:
+
+Your media is scattered.
+Your workflow is slow.
+Your content takes too long to produce.
+
+You don’t need more tools.
+You need a system that actually works.
+
+3 Cards:
+
+1. Scattered Files
+Your media is spread across folders, drives, and tools — making it hard to find and reuse.
+
+2. Slow Editing
+Manual editing workflows slow you down and limit your output.
+
+3. Version Chaos
+No shared workspace means endless confusion, duplicate files, and lost versions.
+
+--------------------------------------------------
+
+🧠 Core Features Section
+
+IMPORTANT:
+👉 Digital Asset Management MUST be first and most emphasized
+
+--------------------------------------------------
+
+1. Digital Asset Management (PRIMARY)
+
+Title:
+Centralize, structure, and instantly find your media
+
+Description:
+Organize all your media in one place with a powerful and scalable system.
+
+Bullet Points:
+- Smart search with AI-driven tagging
+- Custom folder hierarchies
+- Support for images, videos, and more
+
+--------------------------------------------------
+
+2. AI Content Creation
+
+Title:
+Generate images and content instantly
+
+Description:
+Create and enhance content using AI directly from your media library.
+
+Bullet Points:
+- Text-to-image generation
+- Context-aware content suggestions
+- Automatic quality enhancement
+
+--------------------------------------------------
+
+3. Video Transformation
+
+Title:
+Turn long videos into short-form content
+
+Description:
+Convert raw video into ready-to-publish content in minutes.
+
+Bullet Points:
+- Auto-detect key moments
+- Smart caption generation
+- Optimized export for social platforms
+
+--------------------------------------------------
+
+4. Collaboration
+
+Title:
+Work together like a shared workspace
+
+Description:
+Collaborate on media with your team in real time.
+
+Bullet Points:
+- Shared projects and comments
+- Role-based access control
+- Version tracking and history
+
+--------------------------------------------------
+
+🖥 Product UI Section
+
+IMPORTANT:
+👉 Replace placeholder images with REAL product screenshots
+
+Instruction:
+
+Use real product UI screenshots and enhance them visually (add shadows, depth, clean presentation).
+
+Focus on:
+- Media grid (DAM)
+- AI tools
+- Editing interface
+
+--------------------------------------------------
+
+🔄 Workflow Section
+
+Title:
+
+From raw media to published content — in minutes
+
+Steps:
+
+1. Upload
+Drop your media into your workspace
+
+2. AI Analysis
+Automatically understand and tag your content
+
+3. Edit
+Refine content using AI tools
+
+4. Transform
+Convert into ready-to-use content
+
+5. Publish
+Export and share across platforms
+
+Make this visually simple and horizontal with arrows.
+
+--------------------------------------------------
+
+💬 Testimonials Section
+
+Title:
+
+Loved by modern content teams
+
+- 3~6 testimonial cards
+- Include name, role, and short quote
+
+--------------------------------------------------
+
+❓ FAQ Section
+
+Include:
+
+- What is Yettey?
+- How does AI work?
+- Who is Yettey for?
+- How is pricing structured?
+
+--------------------------------------------------
+
+🔥 Final CTA Section
+
+Title:
+
+Turn your media into content today
+
+Subtext:
+
+Join teams that are moving faster with smarter content workflows.
+
+CTA:
+- Start for free
+
+--------------------------------------------------
+
+📌 Footer
+
+Left:
+- Logo
+- Description:
+
+Manage and transform your media with AI
+
+Columns:
+
+Product
+- Digital Asset Management
+- AI Tools
+- Video Transformation
+- Collaboration
+
+Solutions
+- Marketing Teams
+- Creators
+- Agencies
+
+Resources
+- Blog
+- Guides
+- Documentation
+
+Company
+- About
+- Contact
+
+Legal
+- Privacy Policy
+- Terms of Service
+
+Bottom:
+- Copyright
+
+--------------------------------------------------
+
+⚙️ Technical Requirements
+
+- Use Next.js + Tailwind CSS
+- Fully responsive
+- SEO-friendly structure (important)
+- Clean component-based structure
+- Fast loading performance
+
+--------------------------------------------------
+
+🎯 Final Goal
+
+This is NOT just a design.
+
+This is a conversion-focused SaaS landing page.
+
+- Clear positioning
+- Simple messaging
+- Strong CTA
+- DAM as the core identity
