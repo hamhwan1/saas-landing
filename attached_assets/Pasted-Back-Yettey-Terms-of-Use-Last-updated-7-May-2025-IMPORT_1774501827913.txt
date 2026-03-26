@@ -1,0 +1,92 @@
+Back
+Yettey Terms of Use
+Last updated: 7 May 2025
+
+IMPORTANT – READ CAREFULLY: By creating an account, accessing, or using Yettey, you agree to these Terms and our Privacy Policy. If you disagree, do not use the Service.
+1. Service Description
+Yettey enables you to upload, store, organize, and share digital files (“Assets”) in the cloud, with metadata, collaboration tools, and integrations.
+
+2. Eligibility
+Must be at least 13 years old (or higher local age of digital consent).
+Minors must have parental or guardian permission.
+You must have legal capacity to contract and not be barred by law.
+3. Account Registration & Security
+Provide accurate, complete, and current information; keep it updated.
+Safeguard your password and OAuth credentials.
+Notify us immediately at support@cloudike.io of unauthorized use or breaches.
+You are liable for account activities, except when caused by our negligence.
+4. User Content
+All “User Content” (Assets, text, graphics, etc.) you upload remains your property.
+
+5. License to CLOUDIKE Inc.
+You grant CLOUDIKE and subprocessors a worldwide, non-exclusive, royalty-free license to host, process, transmit, display, and back up your User Content solely to operate and improve the Service, per our Privacy Policy.
+
+6. Prohibited Conduct
+You must not:
+
+Upload/share illegal, infringing, defamatory, or unlawful content.
+Violate or attempt to violate Service security.
+Reverse engineer, decompile, or disassemble the Service.
+Use the Service for spam or malware distribution.
+Share login credentials or bypass usage limits.
+Disrupt the Service or servers.
+Violate export control or sanctions laws.
+7. Intellectual Property
+Except for your User Content, all software, logos, trademarks, and materials (“CLOUDIKE Materials”) are owned or licensed by CLOUDIKE and are protected by law. No ownership rights are transferred. Trademarks require our prior written consent.
+
+8. Fees & Payment
+Pricing and storage limits are on our website or order forms.
+By subscribing, you authorize charges to your payment method.
+Fees are non-refundable except as required by law or stated.
+Fee changes require 30 days’ notice.
+9. Third-Party Services
+Integrations (e.g., Google OAuth) are subject to third-party terms. CLOUDIKE isn’t responsible for those services.
+
+10. Privacy
+Your data usage is governed by the Yettey Privacy Policy, which you acknowledge having read.
+
+11. Termination & Suspension
+We may suspend or terminate access if you:
+
+Breach these Terms
+Are legally required to be suspended
+Pose an emergency risk to Service integrity
+You may cancel your account anytime in-app. Upon termination, your license ends; sections 7 and 12–15 survive.
+
+12. Disclaimers
+THE SERVICE IS PROVIDED “AS IS” AND “AS AVAILABLE.”
+
+CLOUDIKE DISCLAIMS ALL WARRANTIES-express or implied-including merchantability, fitness for a particular purpose, and non-infringement. We do not guarantee uninterrupted, error-free, or fully secure operation.
+
+13. Limitation of Liability
+To the fullest extent allowed by law, CLOUDIKE and its affiliates are not liable for indirect, incidental, special, consequential, or punitive damages, or any loss of profits, data, or goodwill-even if advised of the possibility.
+
+Aggregate liability capped at the greater of USD 100 or amounts paid to CLOUDIKE in the preceding 12 months.
+
+(Some jurisdictions limit warranty exclusions; liability then limited to the maximum permitted.)
+
+14. Indemnification
+You agree to indemnify and hold harmless CLOUDIKE and affiliates from any claim, loss, or expense (including attorneys’ fees) arising from:
+
+Your User Content
+Your breach of these Terms
+Your violation of laws or third-party rights
+15. Governing Law & Dispute Resolution
+Governed by the laws of the Republic of Korea (no conflict-of-law rules).
+Exclusive jurisdiction: Seoul Central District Court (unless mandatory venue differs).
+EU/EEA consumers may use the EU online dispute-resolution platform: https://ec.europa.eu/consumers/odr
+16. Modifications
+We may update these Terms occasionally. Revised Terms will show a new “Last updated” date, with 14 days’ notice for material changes. Continued use after effective date constitutes acceptance.
+
+17. Miscellaneous
+Entire Agreement: Supersedes prior agreements.
+Severability: Unenforceable provisions don’t affect others.
+Assignment: CLOUDIKE may assign; you may not without consent.
+Force Majeure: No liability for causes beyond reasonable control.
+No Waiver: Failure to enforce a right doesn’t waive future enforcement.
+18. Contact
+CLOUDIKE Inc.
+
+Email: support@cloudike.io
+Phone: +82 2 1811-9881
+Address: 경기 성남시 수정구 창업로 43, 글로벌비즈센터 B동 809호, CLOUDIKE Inc.
