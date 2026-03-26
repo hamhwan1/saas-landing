@@ -11,6 +11,9 @@ import TeamCollaboration from "@/pages/product/TeamCollaboration";
 import ForCreators from "@/pages/use-cases/ForCreators";
 import ForMarketers from "@/pages/use-cases/ForMarketers";
 import ForTeams from "@/pages/use-cases/ForTeams";
+import Blog from "@/pages/resources/Blog";
+import Guides from "@/pages/resources/Guides";
+import HelpCenter from "@/pages/resources/HelpCenter";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient({
@@ -34,6 +37,9 @@ function Router() {
       <Route path="/use-cases/creators" component={ForCreators} />
       <Route path="/use-cases/marketers" component={ForMarketers} />
       <Route path="/use-cases/teams" component={ForTeams} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/guides" component={Guides} />
+      <Route path="/help" component={HelpCenter} />
       <Route component={NotFound} />
     </Switch>
   );

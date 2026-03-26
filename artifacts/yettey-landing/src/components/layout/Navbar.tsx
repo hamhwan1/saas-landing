@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, ArrowRight, LayoutGrid, Sparkles, Video, Users, Clapperboard, TrendingUp, UserCheck } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight, LayoutGrid, Sparkles, Video, Users, Clapperboard, TrendingUp, UserCheck, BookOpen, FileText, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -55,20 +55,44 @@ const useCaseItems = [
   },
 ];
 
-const simpleDropdowns: Record<string, string[]> = {
-  Resources: ["Blog", "Guides", "Help Center"],
-};
+const resourceItems = [
+  {
+    icon: FileText,
+    title: "Blog",
+    desc: "Read articles and updates",
+    href: "/blog",
+    color: "#7C3AED",
+  },
+  {
+    icon: BookOpen,
+    title: "Guides",
+    desc: "Learn how to use Yettey",
+    href: "/guides",
+    color: "#F97316",
+  },
+  {
+    icon: MessageCircle,
+    title: "Help Center",
+    desc: "Find answers and support",
+    href: "/help",
+    color: "#10B981",
+  },
+];
+
+const simpleDropdowns: Record<string, string[]> = {};
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
   const [useCasesOpen, setUseCasesOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const [location] = useLocation();
   const productRef = useRef<HTMLDivElement>(null);
   const useCasesRef = useRef<HTMLDivElement>(null);
   const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const ucLeaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const resLeaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -89,6 +113,13 @@ export function Navbar() {
   };
   const handleUseCasesLeave = () => {
     ucLeaveTimer.current = setTimeout(() => setUseCasesOpen(false), 120);
+  };
+  const handleResourcesEnter = () => {
+    if (resLeaveTimer.current) clearTimeout(resLeaveTimer.current);
+    setResourcesOpen(true);
+  };
+  const handleResourcesLeave = () => {
+    resLeaveTimer.current = setTimeout(() => setResourcesOpen(false), 120);
   };
 
   return (
@@ -252,27 +283,72 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            {/* Resources simple dropdown */}
-            {Object.entries(simpleDropdowns).map(([name, items]) => (
-              <div key={name} className="relative group">
-                <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2">
-                  {name}
-                  <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
-                </button>
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200">
-                  <div className="bg-card border border-border rounded-xl shadow-xl p-2 w-48 flex flex-col gap-1">
-                    {items.map((item) => (
-                      <button
-                        key={item}
-                        className="text-left px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors"
-                      >
-                        {item}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+            {/* Resources mega-dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={handleResourcesEnter}
+              onMouseLeave={handleResourcesLeave}
+            >
+              <button
+                className={cn(
+                  "flex items-center gap-1 text-sm font-medium transition-colors py-2",
+                  location.startsWith("/blog") || location.startsWith("/guides") || location.startsWith("/help")
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                Resources
+                <ChevronDown
+                  className={cn(
+                    "w-3 h-3 opacity-50 transition-transform duration-200",
+                    resourcesOpen && "rotate-180 opacity-100"
+                  )}
+                />
+              </button>
+
+              <AnimatePresence>
+                {resourcesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                    transition={{ duration: 0.18, ease: "easeOut" }}
+                    onMouseEnter={handleResourcesEnter}
+                    onMouseLeave={handleResourcesLeave}
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[280px]"
+                  >
+                    <div className="bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl shadow-black/40 p-3 flex flex-col gap-1">
+                      {resourceItems.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setResourcesOpen(false)}
+                            className="flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-colors group"
+                          >
+                            <div
+                              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
+                              style={{ background: `${item.color}20` }}
+                            >
+                              <Icon className="w-4 h-4" style={{ color: item.color }} />
+                            </div>
+                            <div>
+                              <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                                {item.title}
+                              </p>
+                              <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             {/* Pricing link */}
             <Link
@@ -351,18 +427,21 @@ export function Navbar() {
               </div>
 
               {/* Resources mobile */}
-              {Object.entries(simpleDropdowns).map(([name, items]) => (
-                <div key={name} className="flex flex-col gap-2">
-                  <div className="font-medium text-foreground">{name}</div>
-                  <div className="flex flex-col gap-2 pl-4 border-l border-border">
-                    {items.map((item) => (
-                      <button key={item} className="text-left text-sm text-muted-foreground">
-                        {item}
-                      </button>
-                    ))}
-                  </div>
+              <div className="flex flex-col gap-2">
+                <div className="font-medium text-foreground">Resources</div>
+                <div className="flex flex-col gap-1 pl-4 border-l border-border">
+                  {resourceItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
                 </div>
-              ))}
+              </div>
 
               <Link
                 href="/pricing"
