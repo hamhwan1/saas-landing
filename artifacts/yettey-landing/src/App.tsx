@@ -8,6 +8,9 @@ import AssetManagement from "@/pages/product/AssetManagement";
 import AiCreation from "@/pages/product/AiCreation";
 import VideoAutomation from "@/pages/product/VideoAutomation";
 import TeamCollaboration from "@/pages/product/TeamCollaboration";
+import ForCreators from "@/pages/use-cases/ForCreators";
+import ForMarketers from "@/pages/use-cases/ForMarketers";
+import ForTeams from "@/pages/use-cases/ForTeams";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient({
@@ -28,6 +31,9 @@ function Router() {
       <Route path="/product/ai-creation" component={AiCreation} />
       <Route path="/product/video-automation" component={VideoAutomation} />
       <Route path="/product/team-collaboration" component={TeamCollaboration} />
+      <Route path="/use-cases/creators" component={ForCreators} />
+      <Route path="/use-cases/marketers" component={ForMarketers} />
+      <Route path="/use-cases/teams" component={ForTeams} />
       <Route component={NotFound} />
     </Switch>
   );

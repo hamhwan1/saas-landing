@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, ArrowRight, LayoutGrid, Sparkles, Video, Users } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight, LayoutGrid, Sparkles, Video, Users, Clapperboard, TrendingUp, UserCheck } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -31,8 +31,31 @@ const productItems = [
   },
 ];
 
+const useCaseItems = [
+  {
+    icon: Clapperboard,
+    title: "For Creators",
+    desc: "Create more content in less time",
+    href: "/use-cases/creators",
+    color: "#7C3AED",
+  },
+  {
+    icon: TrendingUp,
+    title: "For Marketers",
+    desc: "Scale content without scaling your team",
+    href: "/use-cases/marketers",
+    color: "#0EA5E9",
+  },
+  {
+    icon: UserCheck,
+    title: "For Teams",
+    desc: "Work together without the chaos",
+    href: "/use-cases/teams",
+    color: "#10B981",
+  },
+];
+
 const simpleDropdowns: Record<string, string[]> = {
-  "Use Cases": ["For Creators", "For Marketers", "For Teams"],
   Resources: ["Blog", "Guides", "Help Center"],
 };
 
@@ -40,9 +63,12 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
+  const [useCasesOpen, setUseCasesOpen] = useState(false);
   const [location] = useLocation();
   const productRef = useRef<HTMLDivElement>(null);
+  const useCasesRef = useRef<HTMLDivElement>(null);
   const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const ucLeaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -54,9 +80,15 @@ export function Navbar() {
     if (leaveTimer.current) clearTimeout(leaveTimer.current);
     setProductOpen(true);
   };
-
   const handleProductLeave = () => {
     leaveTimer.current = setTimeout(() => setProductOpen(false), 120);
+  };
+  const handleUseCasesEnter = () => {
+    if (ucLeaveTimer.current) clearTimeout(ucLeaveTimer.current);
+    setUseCasesOpen(true);
+  };
+  const handleUseCasesLeave = () => {
+    ucLeaveTimer.current = setTimeout(() => setUseCasesOpen(false), 120);
   };
 
   return (
@@ -154,7 +186,73 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            {/* Simple dropdowns */}
+            {/* Use Cases mega-dropdown */}
+            <div
+              ref={useCasesRef}
+              className="relative"
+              onMouseEnter={handleUseCasesEnter}
+              onMouseLeave={handleUseCasesLeave}
+            >
+              <button
+                className={cn(
+                  "flex items-center gap-1 text-sm font-medium transition-colors py-2",
+                  location.startsWith("/use-cases") ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                Use Cases
+                <ChevronDown
+                  className={cn(
+                    "w-3 h-3 opacity-50 transition-transform duration-200",
+                    useCasesOpen && "rotate-180 opacity-100"
+                  )}
+                />
+              </button>
+
+              <AnimatePresence>
+                {useCasesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                    transition={{ duration: 0.18, ease: "easeOut" }}
+                    onMouseEnter={handleUseCasesEnter}
+                    onMouseLeave={handleUseCasesLeave}
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[300px]"
+                  >
+                    <div className="bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl shadow-black/40 p-3 flex flex-col gap-1">
+                      {useCaseItems.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setUseCasesOpen(false)}
+                            className="flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-colors group"
+                          >
+                            <div
+                              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5 transition-colors"
+                              style={{ background: `${item.color}20` }}
+                            >
+                              <Icon className="w-4 h-4" style={{ color: item.color }} />
+                            </div>
+                            <div>
+                              <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                                {item.title}
+                              </p>
+                              <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Resources simple dropdown */}
             {Object.entries(simpleDropdowns).map(([name, items]) => (
               <div key={name} className="relative group">
                 <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2">
@@ -235,6 +333,24 @@ export function Navbar() {
                 </div>
               </div>
 
+              {/* Use Cases mobile */}
+              <div className="flex flex-col gap-2">
+                <div className="font-medium text-foreground">Use Cases</div>
+                <div className="flex flex-col gap-1 pl-4 border-l border-border">
+                  {useCaseItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Resources mobile */}
               {Object.entries(simpleDropdowns).map(([name, items]) => (
                 <div key={name} className="flex flex-col gap-2">
                   <div className="font-medium text-foreground">{name}</div>

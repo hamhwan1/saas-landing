@@ -1,0 +1,207 @@
+🚀 1. For Creators 페이지 (🔥 핵심 매출 페이지)
+URL: /use-cases/creators
+
+[Hero]
+Title:
+Create more content. In less time.
+
+Subtitle:
+Turn long videos into short-form content automatically with AI.
+
+CTA:
+Start creating →
+
+--------------------------------------------------
+
+[Problem]
+Title:
+Content creation is slow and exhausting
+
+Points:
+- Editing takes hours
+- You miss viral moments
+- Hard to stay consistent
+
+--------------------------------------------------
+
+[Solution]
+Title:
+One video becomes multiple clips
+
+Description:
+Upload your content once and let AI generate multiple short-form videos ready to post.
+
+--------------------------------------------------
+
+[How it works]
+
+Step 1:
+Upload your video
+
+Step 2:
+AI detects highlights
+
+Step 3:
+Generate short clips
+
+Step 4:
+Export and publish
+
+--------------------------------------------------
+
+[Key Benefits]
+
+- Save hours of editing time
+- Create 10x more content
+- Never miss viral moments
+- Focus on creativity, not editing
+
+--------------------------------------------------
+
+[CTA]
+Title:
+Start creating content today
+
+Button:
+Start Free →
+(Link → /pricing?plan=growth)
+🚀 2. For Marketers 페이지
+URL: /use-cases/marketers
+
+[Hero]
+Title:
+Scale your content without scaling your team
+
+Subtitle:
+Automate content creation and asset management in one platform.
+
+CTA:
+Start scaling →
+
+--------------------------------------------------
+
+[Problem]
+Title:
+Content production is expensive and slow
+
+Points:
+- High video production costs
+- Too many tools and workflows
+- Hard to maintain brand consistency
+
+--------------------------------------------------
+
+[Solution]
+Title:
+All your content in one system
+
+Description:
+Manage assets, generate content, and distribute faster with AI-powered workflows.
+
+--------------------------------------------------
+
+[How it works]
+
+Step 1:
+Upload and organize assets
+
+Step 2:
+Generate content with AI
+
+Step 3:
+Edit and refine
+
+Step 4:
+Distribute across channels
+
+--------------------------------------------------
+
+[Key Benefits]
+
+- Reduce production costs
+- Increase content output
+- Maintain brand consistency
+- Speed up campaign execution
+
+--------------------------------------------------
+
+[CTA]
+Title:
+Scale your content production
+
+Button:
+Start scaling →
+(Link → /pricing?plan=pro)
+🚀 3. For Teams 페이지
+URL: /use-cases/teams
+
+[Hero]
+Title:
+Work together without the chaos
+
+Subtitle:
+Centralize your assets, workflows, and collaboration in one place.
+
+CTA:
+Start collaborating →
+
+--------------------------------------------------
+
+[Problem]
+Title:
+Your team is disconnected
+
+Points:
+- Files are scattered everywhere
+- No clear workflow
+- Hard to collaborate efficiently
+
+--------------------------------------------------
+
+[Solution]
+Title:
+One workspace for everything
+
+Description:
+Bring your team, assets, and workflows together into a single platform.
+
+--------------------------------------------------
+
+[How it works]
+
+Step 1:
+Invite your team
+
+Step 2:
+Share assets
+
+Step 3:
+Collaborate and edit
+
+Step 4:
+Publish together
+
+--------------------------------------------------
+
+[Key Benefits]
+
+- Centralized asset management
+- Clear team workflows
+- Better collaboration
+- Faster execution
+
+--------------------------------------------------
+
+[CTA]
+Title:
+Start working together
+
+Button:
+Start collaborating →
+(Link → /pricing?plan=pro)
+🔥 추가 (진짜 중요한 포인트)
+1. CTA 링크 무조건 이렇게
+페이지	링크
+Creators	/pricing?plan=growth
+Marketers	/pricing?plan=pro
+Teams	/pricing?plan=pro
