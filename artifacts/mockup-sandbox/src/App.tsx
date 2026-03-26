@@ -8,15 +8,14 @@ function _resolveComponent(
   mod: Record<string, unknown>,
   name: string,
 ): ComponentType | undefined {
-  const fns = Object.values(mod).filter(
-    (v) => typeof v === "function",
-  ) as ComponentType[];
-  return (
-    (mod.default as ComponentType) ||
-    (mod.Preview as ComponentType) ||
-    (mod[name] as ComponentType) ||
-    fns[fns.length - 1]
-  );
+  if (typeof mod["default"] === "function") return mod["default"] as ComponentType;
+  if (typeof mod["Preview"] === "function") return mod["Preview"] as ComponentType;
+
+  const namedEntry = Object.entries(mod).find(([k, v]) => k === name && typeof v === "function");
+  if (namedEntry) return namedEntry[1] as ComponentType;
+
+  const fns = Object.values(mod).filter((v) => typeof v === "function") as ComponentType[];
+  return fns[fns.length - 1];
 }
 
 function PreviewRenderer({
