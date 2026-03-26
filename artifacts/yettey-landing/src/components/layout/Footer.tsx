@@ -24,7 +24,7 @@ const companyLinks = [
   { label: "About", href: "#" },
   { label: "Contact", href: "mailto:support@cloudike.io", external: true },
   { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "#terms" },
+  { label: "Terms of Service", href: "/terms" },
 ];
 
 export function Footer() {
@@ -166,7 +166,7 @@ export function Footer() {
               Privacy
             </Link>
             <Link
-              href="#terms"
+              href="/terms"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Terms
