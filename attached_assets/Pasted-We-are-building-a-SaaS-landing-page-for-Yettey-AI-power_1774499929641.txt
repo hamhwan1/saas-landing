@@ -1,0 +1,229 @@
+We are building a SaaS landing page for Yettey (AI-powered digital asset management + content creation platform).
+
+We already have a landing page.
+Now we want to create a high-converting Pricing page.
+
+[Goal]
+- When users click "Pricing" in the header, navigate to /pricing
+- Build a modern SaaS pricing page that matches the landing design (dark mode, clean UI)
+- Focus on conversion (not just layout)
+
+--------------------------------------------------
+
+1. Routing
+
+- Create route: /pricing
+- Link header "Pricing" → /pricing
+- No authentication required
+
+--------------------------------------------------
+
+2. Design System
+
+- Reuse landing page styles (dark gradient background)
+- Keep same font, spacing, button styles
+- Use card-based layout
+- Smooth hover effects (scale, shadow)
+
+--------------------------------------------------
+
+3. Pricing Hero Section (TOP)
+
+Title:
+Simple pricing. Built for creators.
+
+Subtitle:
+Start free. Scale when you grow.
+
+--------------------------------------------------
+
+4. Why Pay Section (IMPORTANT)
+
+Add 3 value cards before pricing:
+
+1.
+Title: Save hours of editing
+Desc: Automatically turn long videos into short-form content
+
+2.
+Title: Publish faster
+Desc: Create, edit, and distribute content in one workflow
+
+3.
+Title: Scale content production
+Desc: Produce 10x more content with the same effort
+
+--------------------------------------------------
+
+5. Pricing Cards
+
+Create 4 plans:
+
+[Free]
+Price: Free
+CTA: Start Free
+Features:
+- 200 Credits
+- 1 Project
+- 1 User
+- 10GB Traffic / Monthly
+- 10GB Storage
+- Generate up to 2 images
+
+Label:
+Perfect for getting started
+
+--------------------------------------------------
+
+[Starter]
+Price: ₩49,900/mo
+Original: ₩54,400 (strikethrough)
+CTA: Start Creating
+
+Extra text:
+≈ 10 videos / month
+
+Features:
+- 1,000 Credits
+- 3 Projects
+- 2 Users
+- 50GB Traffic / Monthly
+- 50GB Storage
+
+Label:
+For individuals starting content creation
+
+--------------------------------------------------
+
+[Growth - Highlighted]
+
+Label badge:
+🔥 Most Popular
+
+Price: ₩99,900/mo
+Original: ₩120,000
+
+CTA: Start Creating
+
+Extra text:
+≈ 40 videos / month
+Save 20% compared to Starter
+
+Features:
+- 4,000 Credits
+- 10 Projects
+- 5 Users
+- 200GB Traffic / Monthly
+- 200GB Storage
+
+--------------------------------------------------
+
+[Pro]
+
+Price: ₩249,900/mo
+Original: ₩330,000
+
+CTA: Start Creating
+
+Extra text:
+≈ 100+ videos / month
+
+Features:
+- 10,000 Credits
+- Unlimited Projects
+- 10 Users
+- 500GB Traffic / Monthly
+- 500GB Storage
+
+Label:
+For high-volume teams
+
+--------------------------------------------------
+
+6. Credits Explanation Section (CRITICAL)
+
+Add a simple explanation block:
+
+Title:
+What are credits?
+
+Content:
+Credits are used when generating content.
+
+Examples:
+• 1 short-form video ≈ 100 credits
+• 1 AI image ≈ 10 credits
+
+You only pay for what you use.
+
+--------------------------------------------------
+
+7. Credits Pack Section
+
+Title:
+Need more credits? Top up anytime.
+
+Cards:
+
+[Credits Pack]
+₩20,000
+700 Credits (valid for 3 months)
+
+[Credits Mega Pack]
+₩40,000
+1,400 Credits (valid for 3 months)
+
+Button:
+Get Started
+
+--------------------------------------------------
+
+8. FAQ Section (Accordion UI)
+
+Questions:
+- What are the usage limits for Yettey?
+- What are credits in Yettey?
+- What benefits does this plan offer?
+- Do unused credits roll over?
+- How is usage calculated?
+- What happens if I run out of credits?
+- Can I check my remaining credits?
+- Can I change my subscription plan?
+- Is Yettey scalable?
+
+--------------------------------------------------
+
+9. Final CTA Section
+
+Title:
+Start creating content in minutes
+
+Subtitle:
+No editing skills required
+
+Button:
+Start Free
+
+--------------------------------------------------
+
+10. Footer
+
+- Reuse landing footer
+- Keep links consistent
+
+--------------------------------------------------
+
+11. UX Details
+
+- Add Monthly / Yearly toggle (UI only)
+- Highlight Growth plan visually (color background)
+- Add hover animation on cards
+- Ensure mobile responsive
+
+--------------------------------------------------
+
+12. Important
+
+- UI only (no payment integration)
+- Clean and reusable code
+- Production-ready structure

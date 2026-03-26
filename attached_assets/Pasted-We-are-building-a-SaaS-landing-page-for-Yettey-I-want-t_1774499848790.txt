@@ -1,0 +1,119 @@
+We are building a SaaS landing page for Yettey.
+
+I want to implement a Pricing page using the same design style as our current landing page (dark mode, modern SaaS UI).
+
+[Goal]
+When users click "Pricing" in the header menu, it should navigate to a dedicated Pricing page.
+
+[Requirements]
+
+1. Routing
+- Create a new route: /pricing
+- The header menu "Pricing" should link to this page
+- Keep routing simple (no auth required)
+
+2. Layout consistency
+- Use the same layout, colors, fonts, and spacing as the landing page
+- Maintain dark theme (same gradient background and UI style)
+- Reuse existing components if possible (cards, buttons, typography)
+
+3. Pricing Section UI
+
+Create 4 pricing plans:
+
+Free
+- Title: Free
+- Price: Free
+- CTA: "Using"
+- Features:
+  - 200 Credits
+  - 1 Project
+  - 1 User
+  - 10GB Traffic / Monthly limit
+  - 10GB Storage
+  - Generate up to 2 images
+
+Starter
+- Price: ₩49,900/mo
+- Original price (optional): ₩54,400 (strikethrough)
+- CTA: Get Started
+- Features:
+  - 1,000 Credits
+  - 3 Projects
+  - 2 Users
+  - 50GB Traffic / Monthly limit
+  - 50GB Storage
+
+Growth (highlighted / recommended)
+- Price: ₩99,900/mo
+- Original price: ₩120,000
+- CTA: Get Started
+- Highlight this plan visually (primary color background)
+- Features:
+  - 4,000 Credits
+  - 10 Projects
+  - 5 Users
+  - 200GB Traffic / Monthly limit
+  - 200GB Storage
+
+Pro
+- Price: ₩249,900/mo
+- Original price: ₩330,000
+- CTA: Get Started
+- Features:
+  - 10,000 Credits
+  - Unlimited Projects
+  - 10 Users
+  - 500GB Traffic / Monthly limit
+  - 500GB Storage
+
+4. Credits Pack Section (below pricing)
+
+Section title: "Credits Pack"
+
+Add two cards:
+
+Credits Pack
+- Price: ₩20,000
+- 700 Credits (valid for 3 months)
+
+Credits Mega Pack
+- Price: ₩40,000
+- 1,400 Credits (valid for 3 months)
+
+Each should have a "Get Started" button.
+
+5. FAQ Section
+
+Add collapsible FAQ section below:
+
+Questions:
+- What are the usage limits for Yettey?
+- What are credits in Yettey?
+- What benefits does this plan offer?
+- Do unused credits roll over?
+- How is usage calculated?
+- What happens if I run out of credits?
+- Can I check my remaining credits?
+- Can I change my subscription plan?
+- Is Yettey scalable?
+
+Use accordion UI (click to expand).
+
+6. Footer
+
+- Reuse the same footer as landing page
+- Keep links consistent
+
+7. UX Details
+
+- Add monthly / yearly toggle UI (no backend needed, just UI)
+- Add hover effects on cards
+- Add smooth transitions (scale or shadow)
+- Keep spacing clean and readable
+
+8. Important
+
+- This is UI-only (no payment integration yet)
+- Make the code clean and reusable
+- Keep it simple and production-ready

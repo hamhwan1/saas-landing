@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +30,7 @@ export function Navbar() {
       name: "Resources",
       dropdown: ["Blog", "Guides", "Help Center"],
     },
-    { name: "Pricing" },
+    { name: "Pricing", href: "/pricing" },
   ];
 
   return (
@@ -55,10 +56,22 @@ export function Navbar() {
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
-                <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2">
-                  {link.name}
-                  {link.dropdown && <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />}
-                </button>
+                {"href" in link && link.href ? (
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      "flex items-center gap-1 text-sm font-medium transition-colors py-2",
+                      location === link.href ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2">
+                    {link.name}
+                    {link.dropdown && <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />}
+                  </button>
+                )}
 
                 {link.dropdown && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200">
@@ -107,7 +120,20 @@ export function Navbar() {
             <div className="px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <div key={link.name} className="flex flex-col gap-2">
-                  <div className="font-medium text-foreground">{link.name}</div>
+                  {"href" in link && link.href ? (
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        "font-medium",
+                        location === link.href ? "text-primary" : "text-foreground"
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <div className="font-medium text-foreground">{link.name}</div>
+                  )}
                   {link.dropdown && (
                     <div className="flex flex-col gap-2 pl-4 border-l border-border">
                       {link.dropdown.map((item) => (
