@@ -39,22 +39,21 @@ function Hero() {
         <FadeIn>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-white/80">Introducing Yettey 2.0</span>
+            <span className="text-sm font-medium text-white/80">AI Media Workflow Platform</span>
           </div>
         </FadeIn>
         
         <FadeIn delay={0.1}>
           <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6">
-            Manage your media like data.<br />
-            <span className="text-gradient-primary">Turn it into content with AI.</span>
+            Turn your media into content.<br />
+            <span className="text-gradient-primary">All in one AI platform.</span>
           </h1>
         </FadeIn>
         
         <FadeIn delay={0.2}>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            A centralized platform to organize, analyze, and transform your media.<br />
-            Built for marketers, creators, and teams managing content at scale.
-          </p>
+            From raw media to ready-to-publish content — faster than ever.<br />
+            </p>
         </FadeIn>
         
         <FadeIn delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -84,18 +83,18 @@ function Problems() {
   const problems = [
     {
       icon: Search,
-      title: "Scattered Files",
-      desc: "Your media is spread across folders, drives, and tools — making it hard to find and reuse."
+      title: "Files are everywhere",
+      desc: "Hard to find. Hard to reuse."
     },
     {
       icon: Video,
-      title: "Slow Editing",
-      desc: "Manual editing workflows slow you down and limit your output."
+      title: "Editing takes too long",
+      desc: "Manual work slows everything down."
     },
     {
       icon: Users,
-      title: "Version Chaos",
-      desc: "No shared workspace means endless confusion, duplicate files, and lost versions."
+      title: "Too many versions",
+      desc: "Confusion, duplicates, and lost files."
     }
   ];
 
@@ -104,13 +103,11 @@ function Problems() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
-            Creating content shouldn't be this complicated
+            Content creation is broken.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Your media is scattered.<br />
-            Your workflow is slow.<br />
-            Your content takes too long to produce.<br /><br />
-            You don't need more tools. You need a system that actually works.
+            Too many tools. Too much time.<br />
+            You need one system that actually works.<br />
           </p>
         </FadeIn>
 
@@ -135,38 +132,38 @@ function Problems() {
 function Features() {
   const features = [
     {
-      title: "Centralize, structure, and instantly find your media",
-      tag: "Digital Asset Management",
-      description: "Organize all your media in one place with a powerful and scalable system.",
+      title: "Find anything instantly.",
+      tag: "Manage your media",
+      description: "No more folders, chaos, or lost files.",
       icon: FolderTree,
-      bullets: ["Smart search with AI-driven tagging", "Custom folder hierarchies", "Support for images, videos, and more"],
+      bullets: ["AI-powered search", "Smart organization", "Works with any media"],
       align: "left",
       image: "feature-dam.png"
     },
     {
-      title: "Generate images and content instantly",
-      tag: "AI Content Creation",
-      description: "Create and enhance content using AI directly from your media library.",
+      title: "Create content from your media.",
+      tag: "AI Content",
+      description: "No prompts, no extra tools — just use what you already have.",
       icon: Sparkles,
-      bullets: ["Text-to-image generation", "Context-aware content suggestions", "Automatic quality enhancement"],
+      bullets: ["Generate from your assets", "Smart content suggestions", "Enhance in seconds"],
       align: "right",
       image: "feature-ai.png"
     },
     {
-      title: "Turn long videos into short-form content",
-      tag: "Video Transformation",
-      description: "Convert raw video into ready-to-publish content in minutes.",
+      title: "Turn videos into viral short-form content.",
+      tag: "Video to Shorts",
+      description: "Find key moments, add captions, and publish — automatically.",
       icon: Scissors,
-      bullets: ["Auto-detect key moments", "Smart caption generation", "Optimized export for social platforms"],
+      bullets: ["Find the best moments", "Auto captions & edits", "Ready for TikTok, Reels, Shorts"],
       align: "left",
       image: "feature-video.png"
     },
     {
-      title: "Work together like a shared workspace",
-      tag: "Collaboration",
-      description: "Collaborate on media with your team in real time.",
+      title: "Stop sending files back and forth.",
+      tag: "Team Collaboration",
+      description: "Share, comment, and manage everything in one place.",
       icon: MessageSquare,
-      bullets: ["Shared projects and comments", "Role-based access control", "Version tracking and history"],
+      bullets: ["Share projects instantly", "Comment and review together", "No more version confusion"],
       align: "right",
       image: "feature-collab.png"
     }
@@ -229,13 +226,13 @@ function ProductUI() {
         <FadeIn className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 border border-primary/20">
             <FolderTree className="w-4 h-4" />
-            Product
+            All-in-one platform
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            Everything your media workflow needs
+            One platform. Everything done.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A unified workspace for your media library, AI tools, and content publishing — all in one platform.
+            Manage, create, and publish — all in one place.
           </p>
         </FadeIn>
 
@@ -252,8 +249,8 @@ function ProductUI() {
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-medium mb-2">
                   <FolderTree className="w-3 h-3" /> Digital Asset Management
                 </span>
-                <h3 className="text-lg font-bold text-white">Centralized media library</h3>
-                <p className="text-sm text-white/60">Find any asset in seconds with AI-powered search</p>
+                <h3 className="text-lg font-bold text-white">Find anything instantly</h3>
+                <p className="text-sm text-white/60">No more lost files or messy folders.</p>
               </div>
             </div>
           </FadeIn>
@@ -270,8 +267,8 @@ function ProductUI() {
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-medium mb-2">
                   <Sparkles className="w-3 h-3" /> AI Tools
                 </span>
-                <h3 className="text-lg font-bold text-white">AI-powered content creation</h3>
-                <p className="text-sm text-white/60">Generate and transform content directly from your library</p>
+                <h3 className="text-lg font-bold text-white">Create content from your media</h3>
+                <p className="text-sm text-white/60">No prompts, no extra tools — just use what you already have.</p>
               </div>
             </div>
           </FadeIn>
@@ -283,11 +280,11 @@ function ProductUI() {
 
 function Workflow() {
   const steps = [
-    { icon: UploadCloud, title: "Upload", desc: "Drop your media into your workspace" },
-    { icon: Cpu, title: "AI Analysis", desc: "Automatically understand and tag your content" },
-    { icon: Scissors, title: "Edit", desc: "Refine content using AI tools" },
-    { icon: Sparkles, title: "Transform", desc: "Convert into ready-to-use content" },
-    { icon: Share2, title: "Publish", desc: "Export and share across platforms" },
+    { icon: UploadCloud, title: "Upload", desc: "Add your media" },
+    { icon: Cpu, title: "Analyze", desc: "Find key moments" },
+    { icon: Scissors, title: "Edit", desc: "Refine content" },
+    { icon: Sparkles, title: "Create", desc: "Make it ready" },
+    { icon: Share2, title: "Publish", desc: "Share everywhere" },
   ];
 
   return (
@@ -295,9 +292,9 @@ function Workflow() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeIn>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            From raw media to published content — in minutes
+            Turn media into content — fast.
           </h2>
-          <p className="text-muted-foreground text-lg">A streamlined pipeline built for modern content teams.</p>
+          <p className="text-muted-foreground text-lg">Upload → Analyze → Edit → Create → Publish</p>
         </FadeIn>
 
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between relative">
