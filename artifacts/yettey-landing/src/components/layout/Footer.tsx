@@ -23,7 +23,7 @@ const resourceLinks = [
 const companyLinks = [
   { label: "About", href: "#" },
   { label: "Contact", href: "mailto:support@cloudike.io", external: true },
-  { label: "Privacy Policy", href: "#privacy" },
+  { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "#terms" },
 ];
 
@@ -160,7 +160,7 @@ export function Footer() {
 
           <div className="flex items-center gap-6 order-1 sm:order-2">
             <Link
-              href="#privacy"
+              href="/privacy"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Privacy

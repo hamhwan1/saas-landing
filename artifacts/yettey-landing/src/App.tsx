@@ -16,6 +16,7 @@ import Blog from "@/pages/resources/Blog";
 import Guides from "@/pages/resources/Guides";
 import HelpCenter from "@/pages/resources/HelpCenter";
 import NotFound from "@/pages/not-found";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient({
@@ -51,6 +52,7 @@ function Router() {
           <Route path="/blog" component={Blog} />
           <Route path="/guides" component={Guides} />
           <Route path="/help" component={HelpCenter} />
+          <Route path="/privacy" component={PrivacyPolicy} />
           <Route component={NotFound} />
         </Switch>
       </motion.div>
