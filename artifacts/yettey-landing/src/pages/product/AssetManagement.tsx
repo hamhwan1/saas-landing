@@ -3,41 +3,61 @@ import { ProductPageLayout, ProductPageData } from "@/components/product/Product
 const data: ProductPageData = {
   badge: "Asset Management",
   badgeColor: "#7C3AED",
-  heroTitle: "Manage all your media",
+  heroTitle: "Work with all your media in one place.",
   heroHighlight: "in one place.",
-  heroDesc: "Store, organize, and find your files instantly — no more hunting through folders.",
+  heroDesc: "Organize, find, and use your content — all in one system.",
   ctaText: "Start managing your assets",
   ctaHref: "/pricing",
-  whatItDoes:
-    "Yettey gives your team a single source of truth for every image, video, and document. Smart AI tagging means you find exactly what you need in seconds.",
+  whatItDoes: (
+    <>
+      All your media — organized and ready to use.
+      <br />
+      Find anything in seconds.
+    </>
+  ),
   accentColor: "#7C3AED",
   features: [
     {
       icon: "🔍",
-      title: "Smart Search (AI Tagging)",
-      desc: "Automatically tags every asset so you can search by content, color, or context — not just filenames.",
+      title: "Smart Search",
+      desc:
+        <>
+          Find anything instantly. 
+          <br />
+          Search your media by content, context, or keywords — not just filenames.
+        </>,
     },
     {
       icon: "📂",
-      title: "Folder & Collection System",
-      desc: "Organize assets into projects, campaigns, or custom collections that make sense for your workflow.",
+      title: "Organize your media",
+      desc: "Organize your media your way Group files into projects, campaigns, or collections that fit your workflow.",
     },
     {
       icon: "🔄",
-      title: "Duplicate Detection",
-      desc: "Automatically detects and surfaces duplicate files to keep your library clean and storage costs low.",
+      title: "Duplicate",
+      desc:
+        <>
+          Keep your library clean.
+          <br />
+          Detect duplicates automatically and reduce clutter.
+        </>,
     },
     {
       icon: "⚡",
-      title: "Fast Preview",
-      desc: "Stream-quality previews for images, videos, and documents without downloading the full file.",
+      title: "Preview",
+      desc:
+        <>
+          Preview instantly.
+          <br />
+          View images, videos, and files without downloading anything.
+        </>,
     },
   ],
   steps: [
-    { step: "📤", label: "Upload", desc: "Drag and drop any file type from your device or cloud storage." },
-    { step: "🗂️", label: "Organize", desc: "AI auto-tags files; you assign them to projects or collections." },
-    { step: "🔎", label: "Search", desc: "Find any asset in seconds using natural language or filters." },
-    { step: "✅", label: "Use", desc: "Share, download, or push directly to your content workflow." },
+    { step: "📤", label: "Upload", desc: "Bring all your media into one place." },
+    { step: "🗂️", label: "Organize", desc: "Keep everything structured and easy to manage." },
+    { step: "🔎", label: "Search", desc: "Find anything instantly when you need it." },
+    { step: "✅", label: "Use", desc: "Share, download, or use your media anywhere." },
   ],
   previewLabel: "Asset Library Dashboard",
 };
