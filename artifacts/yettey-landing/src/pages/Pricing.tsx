@@ -61,8 +61,8 @@ const plans: Plan[] = [
   },
   {
     name: "Starter",
-    price: "₩49,900",
-    originalPrice: "₩54,400",
+    price: "$49",
+    originalPrice: "$64",
     cta: "Start Creating",
     hint: "≈ 10 videos / month",
     label: "For individuals starting content creation",
@@ -78,8 +78,8 @@ const plans: Plan[] = [
   {
     name: "Growth",
     badge: "🔥 Most Popular",
-    price: "₩99,900",
-    originalPrice: "₩120,000",
+    price: "$99",
+    originalPrice: "$129",
     cta: "Start Creating",
     hint: "≈ 40 videos / month · Save 20% vs Starter",
     label: "",
@@ -94,8 +94,8 @@ const plans: Plan[] = [
   },
   {
     name: "Pro",
-    price: "₩249,900",
-    originalPrice: "₩330,000",
+    price: "$249",
+    originalPrice: "$329",
     cta: "Start Creating",
     hint: "≈ 100+ videos / month",
     label: "For high-volume teams",
@@ -113,13 +113,13 @@ const plans: Plan[] = [
 const creditPacks = [
   {
     name: "Credits Pack",
-    price: "₩20,000",
+    price: "$20",
     credits: "700 Credits",
     validity: "valid for 3 months",
   },
   {
     name: "Credits Mega Pack",
-    price: "₩40,000",
+    price: "$40",
     credits: "1,400 Credits",
     validity: "valid for 3 months",
   },
@@ -168,11 +168,11 @@ const faqs = [
 
 function PlanCard({ plan, billing, index }: { plan: Plan; billing: "monthly" | "yearly"; index: number }) {
   const yearlyDiscount = billing === "yearly" ? 0.8 : 1;
-  const priceNum = parseInt(plan.price.replace(/[₩,]/g, ""), 10);
+  const priceNum = parseInt(plan.price.replace(/[^0-9]/g, ""), 10);
   const displayPrice =
     plan.price === "Free"
       ? "Free"
-      : `₩${Math.round(priceNum * yearlyDiscount).toLocaleString("ko-KR")}`;
+      : `$${Math.round(priceNum * yearlyDiscount)}`;
 
   return (
     <motion.div
