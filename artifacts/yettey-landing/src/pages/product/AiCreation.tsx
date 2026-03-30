@@ -3,9 +3,9 @@ import { ProductPageLayout, ProductPageData } from "@/components/product/Product
 const data: ProductPageData = {
   badge: "AI Creation",
   badgeColor: "#8B5CF6",
-  heroTitle: "Create content instantly",
-  heroHighlight: "with AI.",
-  heroDesc: "Generate stunning images, edit with prompts, and produce ready-to-publish assets in seconds.",
+  heroTitle: "Create multiple assets",
+  heroHighlight: " from a single prompt.",
+  heroDesc: "Generate, refine, and export content — all in one place.",
   ctaText: "Start creating with AI",
   ctaHref: "/pricing",
   whatItDoes:
@@ -40,6 +40,7 @@ const data: ProductPageData = {
     { step: "⬇️", label: "Download", desc: "Export in any format and push directly to your asset library." },
   ],
   previewLabel: "AI Transform Studio",
+  previewImage: "/images/ai-creation-ui.png",
 };
 
 export default function AiCreation() {
