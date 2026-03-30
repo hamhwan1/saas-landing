@@ -33,6 +33,7 @@ export interface ProductPageData {
   features: ProductFeature[];
   steps: ProductStep[];
   previewLabel?: string;
+  previewImage?: string;
   accentColor: string;
 }
 
@@ -168,34 +169,54 @@ export function ProductPageLayout({ data }: { data: ProductPageData }) {
         </div>
       </section>
 
-      {/* ── UI Preview placeholder ─────────── */}
+      {/* ── UI Preview ─────────────────────── */}
       <section className="py-16 max-w-5xl mx-auto px-4">
         <motion.div
           variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
-          className="rounded-2xl border border-border bg-card overflow-hidden"
+          className="rounded-2xl border border-border bg-card overflow-hidden shadow-2xl shadow-black/40"
         >
-          <div className="flex items-center gap-2 px-5 py-4 border-b border-border">
-            <div className="w-3 h-3 rounded-full bg-red-500/60" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-            <div className="w-3 h-3 rounded-full bg-green-500/60" />
-            <span className="text-xs text-muted-foreground ml-3">{data.previewLabel ?? "UI Preview"}</span>
+          {/* Mac-style title bar */}
+          <div className="flex items-center gap-2 px-5 py-3.5 border-b border-border bg-card/80">
+            <div className="w-3 h-3 rounded-full bg-red-500/70" />
+            <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+            <div className="w-3 h-3 rounded-full bg-green-500/70" />
+            <span className="text-xs text-muted-foreground ml-3 font-medium">
+              {data.previewLabel ?? "UI Preview"}
+            </span>
           </div>
-          <div
-            className="h-64 md:h-80 flex items-center justify-center"
-            style={{ background: `linear-gradient(135deg, ${data.accentColor}10, transparent)` }}
-          >
-            <div className="text-center">
-              <div
-                className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl"
-                style={{ background: `${data.accentColor}20` }}
-              >
-                {data.features[0]?.icon}
-              </div>
-              <p className="text-sm text-muted-foreground">
-                {data.previewLabel ?? "UI Preview"} — screenshot goes here
-              </p>
+
+          {data.previewImage ? (
+            /* Real screenshot */
+            <div
+              className="relative w-full overflow-hidden"
+              style={{ background: `linear-gradient(160deg, ${data.accentColor}08, #0d0d14)` }}
+            >
+              <img
+                src={data.previewImage}
+                alt={data.previewLabel ?? "UI Preview"}
+                className="w-full h-auto object-cover block"
+                loading="lazy"
+              />
             </div>
-          </div>
+          ) : (
+            /* Placeholder */
+            <div
+              className="h-64 md:h-80 flex items-center justify-center"
+              style={{ background: `linear-gradient(135deg, ${data.accentColor}10, transparent)` }}
+            >
+              <div className="text-center">
+                <div
+                  className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl"
+                  style={{ background: `${data.accentColor}20` }}
+                >
+                  {data.features[0]?.icon}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {data.previewLabel ?? "UI Preview"} — screenshot goes here
+                </p>
+              </div>
+            </div>
+          )}
         </motion.div>
       </section>
 

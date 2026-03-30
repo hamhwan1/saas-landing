@@ -60,6 +60,7 @@ const data: ProductPageData = {
     { step: "✅", label: "Use", desc: "Share, download, or use your media anywhere." },
   ],
   previewLabel: "Asset Library Dashboard",
+  previewImage: "/images/asset-management-ui.png",
 };
 
 export default function AssetManagement() {
