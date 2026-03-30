@@ -3,43 +3,44 @@ import { ProductPageLayout, ProductPageData } from "@/components/product/Product
 const data: ProductPageData = {
   badge: "🔥 Video Automation",
   badgeColor: "#F97316",
-  heroTitle: "Turn long videos into",
-  heroHighlight: "short-form content.",
-  heroDesc: "Automatically convert full-length videos into viral Reels, Shorts, and TikToks — in minutes, not hours.",
+  heroTitle: "Turn one long video into ",
+  heroHighlight: "multiple viral clips.",
+  heroDesc: "Generate multiple ready-to-post clips for Reels, Shorts, and TikTok — in minutes, not hours.",
   ctaText: "Start creating videos",
   ctaHref: "/pricing",
   whatItDoes:
-    "Yettey's Video Automation engine analyzes your footage, detects the best moments, and outputs platform-ready clips with captions — so you can publish 10× more without editing manually.",
+    "Create multiple ready-to-post clips with captions — and publish 10x more content without editing.",
   accentColor: "#F97316",
   features: [
     {
       icon: "🎯",
       title: "Auto Highlight Detection",
-      desc: "AI scans your video and identifies the most engaging moments — hooks, peaks, and key quotes.",
+      desc: "Automatically find the best moments in your video — ready to turn into clips.",
     },
     {
       icon: "📱",
       title: "Short-Form Generation",
-      desc: "One upload creates multiple clips optimized for Reels, YouTube Shorts, and TikTok automatically.",
+      desc: "Turn one video into multiple ready-to-post clips for Reels, Shorts, and TikTok.",
     },
     {
       icon: "💬",
       title: "Subtitle & Caption Auto-Creation",
-      desc: "Accurate, styled subtitles generated and burned in automatically — no manual syncing.",
+      desc: "Generate captions automatically — no syncing, no manual work.",
     },
     {
       icon: "🎬",
       title: "Scene-Based Editing",
-      desc: "Split, reorder, and trim scenes with a visual timeline — no professional editing experience needed.",
+      desc: "Edit clips visually with a simple timeline — no editing skills needed.",
     },
   ],
   steps: [
-    { step: "📤", label: "Upload Video", desc: "Upload any long-form video — interviews, podcasts, webinars, tutorials." },
-    { step: "🤖", label: "AI Analysis", desc: "Our engine detects highlights, emotions, and scene transitions automatically." },
-    { step: "✂️", label: "Clip Generation", desc: "Multiple short clips are generated and formatted for each platform." },
-    { step: "🚀", label: "Export", desc: "Download clips or publish directly to your connected social channels." },
+    { step: "📤", label: "Upload Video", desc: "Any long video works — podcasts, interviews, tutorials." },
+    { step: "🤖", label: "AI Analysis", desc: "Highlights, hooks, and key scenes — automatically." },
+    { step: "✂️", label: "Clip Generation", desc: "Ready-to-post clips optimized for every platform." },
+    { step: "🚀", label: "Export", desc: "Download or post directly to your social channels." },
   ],
   previewLabel: "Video Editor Timeline",
+  previewImage: "/images/video-automation-ui.png",
 };
 
 export default function VideoAutomation() {
